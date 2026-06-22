@@ -58,10 +58,13 @@
 
   /* ===== Hero — editorial masthead ===== */
   .hero { max-width: 1180px; margin: 0 auto; padding: 64px 40px 0 52px; }
+  .name-banner { padding: 0; margin-bottom: 28px; display: inline-block; border-bottom: 3px solid var(--ember); padding-bottom: 14px; }
+  .name-banner .greet { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; font-weight: 400; color: var(--muted); display: block; margin-bottom: 2px; }
+  .name-banner .name { font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 2.9rem); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.05; }
   .masthead-rule { border-top: 1.5px solid var(--ink); padding-top: 10px; display: flex; justify-content: space-between; align-items: baseline; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 56px; flex-wrap: wrap; gap: 8px; }
   .masthead-rule .issue-tag { color: var(--ember); }
 
-  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: end; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
   .hero-kicker { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--signal); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 22px; display: block; }
   .hero h1 {
     font-family: var(--font-display);
@@ -72,7 +75,7 @@
     color: var(--ink);
   }
   .hero h1 em { font-style: italic; font-weight: 500; color: var(--ember); }
-  .hero-side { border-left: 1.5px solid var(--ink); padding-left: 28px; }
+  .hero-side { border-left: none; border-top: 1.5px solid var(--ink); padding-left: 0; padding-top: 22px; }
   .hero-side p { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; font-weight: 400; color: var(--ink-soft); line-height: 1.45; }
   .hero-actions { margin-top: 26px; display: flex; gap: 18px; flex-wrap: wrap; }
   .btn-ink { background: var(--ink); color: var(--paper); padding: 13px 24px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s; }
@@ -104,11 +107,11 @@
   @media (max-width: 780px) { section { padding-left: 28px; padding-right: 24px; } }
 
   /* ===== About ===== */
-  .about-grid { display: grid; grid-template-columns: 1fr 0.62fr; gap: 64px; }
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
   .about-text p { font-size: 1.06rem; margin-bottom: 20px; color: var(--ink-soft); }
   .about-text strong { color: var(--ink); font-weight: 700; }
   .about-dropcap::first-letter { font-family: var(--font-display); font-size: 3.6rem; font-weight: 600; float: left; line-height: 0.8; margin-right: 10px; margin-top: 4px; color: var(--ember); }
-  .about-facts { background: var(--ink); color: var(--paper); padding: 32px; }
+  .about-facts { background: var(--ink); color: var(--paper); padding: 32px; max-width: 460px; }
   .about-facts-title { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; margin-bottom: 22px; color: var(--gold); }
   .fact-row { display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid rgba(247,243,234,0.16); font-size: 0.86rem; }
   .fact-row:last-child { border-bottom: none; }
@@ -232,14 +235,18 @@
 </nav>
 
 <header class="hero">
+  <div class="name-banner">
+    <span class="greet">Hi, I'm</span>
+    <span class="name">Ajay Venkat Sai Bojja</span>
+  </div>
   <div class="masthead-rule">
     <span>Senior OSP Design Engineer — Fiber &amp; HFC Networks</span>
     <span class="issue-tag">Open to Hyderabad · Bangalore · Chennai · Remote</span>
   </div>
   <div class="hero-grid">
     <div>
-      <span class="hero-kicker">Field Notes / 09 Years</span>
-      <h1>The fiber backbone behind <em>America's broadband expansion.</em></h1>
+      <span class="hero-kicker">Senior OSP Design Engineer · 9 Years</span>
+      <h1>I design the fiber backbone behind <em>America's broadband expansion.</em></h1>
     </div>
     <div class="hero-side">
       <p>"An optical budget error is invisible until a crew is standing at the pole with the wrong drawing."</p>
